@@ -21,6 +21,22 @@ class SinglyLinkedList {
 
         return this;
     }
+
+    pop(){}
+
+    unshift(value){}
+
+    shift(){}
+
+    get(idx){}
+
+    set(idx, value){}
+
+    insert(idx, value){}
+
+    remove(idx){}
+
+    reverse(){}
 }
 
 module.exports = {SinglyLinkedList};
