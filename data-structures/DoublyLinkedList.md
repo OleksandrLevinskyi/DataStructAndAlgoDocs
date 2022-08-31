@@ -32,7 +32,7 @@ Doubly Linked List takes up more memory for an extra pointer.\
   * set `tail` to `null`
 * return `value` of the previously stored `tail`
 
-### `unshift (): this`
+### `unshift (value): this`
 #### TIME: `O(1)` | SPACE: `O(1)`
 * create a new node
 * if `length` is 0

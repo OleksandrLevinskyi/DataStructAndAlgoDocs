@@ -5,8 +5,9 @@ describe('singly linked list', () => {
         it('adds a node to an empty list', () => {
             const list = new SinglyLinkedList();
 
-            list.push(1);
+            const result = list.push(1);
 
+            expect(result).toEqual(list);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.head.next).toEqual(null);
@@ -72,8 +73,9 @@ describe('singly linked list', () => {
         it('adds a node to an empty list', () => {
             const list = new SinglyLinkedList();
 
-            list.unshift(1);
+            const result = list.unshift(1);
 
+            expect(result).toEqual(list);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.head.next).toEqual(null);

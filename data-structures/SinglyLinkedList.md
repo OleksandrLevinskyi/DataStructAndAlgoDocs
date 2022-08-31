@@ -29,7 +29,7 @@ Singly Linked List consists of nodes. The node's structure can be found [here](s
 * decrement `length`
 * return `value` of the previously stored `tail`
 
-### `unshift (): this`
+### `unshift (value): this`
 #### TIME: `O(1)` | SPACE: `O(1)`
 * create a new node
 * if `length` is 0
