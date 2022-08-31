@@ -158,7 +158,7 @@ describe('singly linked list', () => {
             const list = new SinglyLinkedList();
             list.push(1);
 
-            const result = list.get(2);
+            const result = list.get(1);
 
             expect(result).toEqual(undefined);
         });
@@ -168,6 +168,7 @@ describe('singly linked list', () => {
             list.push(1);
             list.push(2);
             list.push(3);
+            list.push(4);
 
             const result = list.get(2);
 

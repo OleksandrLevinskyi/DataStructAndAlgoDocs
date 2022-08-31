@@ -59,6 +59,7 @@ class SinglyLinkedList {
 
         this.head = node;
         this.length++;
+
         return this;
     }
 
@@ -68,7 +69,6 @@ class SinglyLinkedList {
         }
 
         const oldHead = this.head;
-
         this.head = this.head.next;
         oldHead.next = null;
         this.length--;
@@ -81,6 +81,16 @@ class SinglyLinkedList {
     }
 
     get(idx) {
+        if (idx < 0 || idx > this.length - 1) {
+            return undefined;
+        }
+
+        let node = this.head;
+        for (let i = 1; i <= idx; i++) {
+            node = node.next;
+        }
+
+        return node.value;
     }
 
     set(idx, value) {
