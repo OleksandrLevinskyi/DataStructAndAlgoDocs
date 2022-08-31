@@ -94,9 +94,9 @@ class SinglyLinkedList {
     }
 
     set(idx, value) {
-        const node =  this.get(idx);
+        const node = this.get(idx);
 
-        if(!node){
+        if (!node) {
             return false;
         }
 
@@ -106,6 +106,24 @@ class SinglyLinkedList {
     }
 
     insert(idx, value) {
+        if (idx < 0 || idx > this.length) {
+            return false;
+        }
+
+        if (idx === 0) {
+            this.unshift(value);
+        } else if (idx === this.length) {
+            this.push(value);
+        } else {
+            const node = new Node(value);
+            const precedingNode = this.get(idx - 1);
+
+            node.next = precedingNode.next;
+            precedingNode.next = node;
+            this.length++;
+        }
+
+        return true;
     }
 
     remove(idx) {
