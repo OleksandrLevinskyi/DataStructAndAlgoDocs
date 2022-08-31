@@ -172,7 +172,7 @@ describe('singly linked list', () => {
 
             const result = list.get(2);
 
-            expect(result).toEqual(3);
+            expect(result.value).toEqual(3);
         });
     });
 
@@ -190,7 +190,7 @@ describe('singly linked list', () => {
             const list = new SinglyLinkedList();
             list.push(1);
 
-            const result = list.set(2, 2);
+            const result = list.set(1, 2);
 
             expect(result).toEqual(false);
         });
@@ -206,7 +206,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(true);
             expect(list.head.value).toEqual(1);
             expect(list.head.next.value).toEqual(10);
-            expect(list.head.next.next).toEqual(list.tail);
+            expect(list.tail.value).toEqual(3);
         });
     });
 

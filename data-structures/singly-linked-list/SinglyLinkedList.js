@@ -90,10 +90,19 @@ class SinglyLinkedList {
             node = node.next;
         }
 
-        return node.value;
+        return node;
     }
 
     set(idx, value) {
+        const node =  this.get(idx);
+
+        if(!node){
+            return false;
+        }
+
+        node.value = value;
+
+        return true;
     }
 
     insert(idx, value) {
