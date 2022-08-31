@@ -1,6 +1,6 @@
 # Stack
 Stack consists of nodes. Stack node's structure can be found [here](singly-linked-list/Node.js).\
-FIFO = First In First Out\
+LIFO = Last In First Out\
 3 properties: `first`, `last`, `size`
 
 ### `push (value): this`*

@@ -1,5 +1,5 @@
 # Singly Linked List
-Singly Linked List consists of nodes. Stack node's structure can be found [here](singly-linked-list/Node.js).\
+Singly Linked List consists of nodes. The node's structure can be found [here](singly-linked-list/Node.js).\
 3 properties: `head`, `tail`, `length`
 
 ---
@@ -20,9 +20,12 @@ Singly Linked List consists of nodes. Stack node's structure can be found [here]
 * if `length` is 0
     * return `underfined`
 * store current `tail` in a variable
-* loop over to reach the 2nd last node 
-* set `next` on the 2nd last node to `null`
-* set `tail` to the 2nd last node
+* if `length` is 1
+  * set `head` and `tail` to `null`
+* else
+  * loop over to reach the 2nd last node 
+  * set `next` on the 2nd last node to `null`
+  * set `tail` to the 2nd last node
 * decrement `length`
 * return `value` of the previously stored `tail`
 
@@ -32,7 +35,7 @@ Singly Linked List consists of nodes. Stack node's structure can be found [here]
 * if `length` is 0
   * set `tail` to be the new node
 * else
-  * set `next` on the new node to be `head`
+  * set new node's `next` to be `head`
 * set `head` to be the new node
 * increment `length`
 * return `this`
@@ -43,7 +46,7 @@ Singly Linked List consists of nodes. Stack node's structure can be found [here]
   * return `underfined`
 * store current `head` in a variable
 * set `head` to the 2nd node
-* set `next` on the `head` to `null`
+* set `head.next` to `null`
 * decrement `length`
 * if `length` is 0
   * set `tail` to `null`
@@ -92,7 +95,7 @@ Singly Linked List consists of nodes. Stack node's structure can be found [here]
 * set preceding node's `next` to deleted node's `next`
 * set deleted node's `next` to `null`
 * decrease `length`
-* return deleted node `value`
+* return deleted node's `value`
 
 ### `reverse (): this`
 #### TIME: `O(n)` | SPACE: `O(1)`

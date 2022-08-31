@@ -22,7 +22,9 @@ class SinglyLinkedList {
         return this;
     }
 
-    pop(){}
+    pop(){
+        //conditional for length at the end
+    }
 
     unshift(value){}
 
