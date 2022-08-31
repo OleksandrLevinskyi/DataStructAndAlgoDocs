@@ -218,6 +218,7 @@ describe('singly linked list', () => {
             const result = list.insert(-1, 2);
 
             expect(result).toEqual(false);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.tail.value).toEqual(1);
         });
@@ -229,6 +230,7 @@ describe('singly linked list', () => {
             const result = list.insert(2, 2);
 
             expect(result).toEqual(false);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.tail.value).toEqual(1);
         });
@@ -240,6 +242,7 @@ describe('singly linked list', () => {
             const result = list.insert(0, 2);
 
             expect(result).toEqual(true);
+            expect(list.length).toEqual(2);
             expect(list.head.value).toEqual(2);
             expect(list.tail.value).toEqual(1);
         });
@@ -251,6 +254,7 @@ describe('singly linked list', () => {
             const result = list.insert(1, 2);
 
             expect(result).toEqual(true);
+            expect(list.length).toEqual(2);
             expect(list.head.value).toEqual(1);
             expect(list.tail.value).toEqual(2);
         });
@@ -263,6 +267,7 @@ describe('singly linked list', () => {
             const result = list.insert(1, 2);
 
             expect(result).toEqual(true);
+            expect(list.length).toEqual(3);
             expect(list.head.value).toEqual(1);
             expect(list.head.next.value).toEqual(2);
             expect(list.tail.value).toEqual(3);
@@ -276,18 +281,20 @@ describe('singly linked list', () => {
 
             const result = list.remove(-1);
 
-            expect(result).toEqual(false);
+            expect(result).toEqual(undefined);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.tail.value).toEqual(1);
         });
 
-        it('returns undefined in case a given idx is greater that a list\'s length', () => {
+        it('returns undefined in case a given idx is greater that a last node\'s idx', () => {
             const list = new SinglyLinkedList();
             list.push(1);
 
-            const result = list.remove(2);
+            const result = list.remove(1);
 
-            expect(result).toEqual(false);
+            expect(result).toEqual(undefined);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.tail.value).toEqual(1);
         });
@@ -299,7 +306,8 @@ describe('singly linked list', () => {
 
             const result = list.remove(0);
 
-            expect(result).toEqual(true);
+            expect(result).toEqual(1);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(2);
             expect(list.tail.value).toEqual(2);
         });
@@ -311,7 +319,8 @@ describe('singly linked list', () => {
 
             const result = list.remove(1);
 
-            expect(result).toEqual(true);
+            expect(result).toEqual(2);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
             expect(list.tail.value).toEqual(1);
         });
@@ -322,9 +331,10 @@ describe('singly linked list', () => {
             list.push(2);
             list.push(3);
 
-            const result = list.insert(1);
+            const result = list.remove(1);
 
-            expect(result).toEqual(true);
+            expect(result).toEqual(2);
+            expect(list.length).toEqual(2);
             expect(list.head.value).toEqual(1);
             expect(list.head.next.value).toEqual(3);
             expect(list.tail.value).toEqual(3);

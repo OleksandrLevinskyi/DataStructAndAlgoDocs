@@ -127,6 +127,26 @@ class SinglyLinkedList {
     }
 
     remove(idx) {
+        if (idx < 0 || idx > this.length - 1) {
+            return undefined;
+        }
+
+        if (idx === 0) {
+            return this.shift();
+        }
+
+        if (idx === this.length - 1) {
+            return this.pop();
+        }
+
+        const precedingNode = this.get(idx - 1);
+        const deletedNode = precedingNode.next;
+
+        precedingNode.next = deletedNode.next;
+        deletedNode.next = null;
+        this.length--;
+
+        return deletedNode.value;
     }
 
     reverse() {
