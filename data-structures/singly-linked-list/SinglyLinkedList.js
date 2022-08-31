@@ -63,6 +63,21 @@ class SinglyLinkedList {
     }
 
     shift() {
+        if (this.length === 0) {
+            return undefined;
+        }
+
+        const oldHead = this.head;
+
+        this.head = this.head.next;
+        oldHead.next = null;
+        this.length--;
+
+        if (this.length === 0) {
+            this.tail = null;
+        }
+
+        return oldHead.value;
     }
 
     get(idx) {

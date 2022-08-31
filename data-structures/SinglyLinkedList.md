@@ -46,7 +46,7 @@ Singly Linked List consists of nodes. The node's structure can be found [here](s
   * return `underfined`
 * store current `head` in a variable
 * set `head` to the 2nd node
-* set `head.next` to `null`
+* set old head's `next` to `null`
 * decrement `length`
 * if `length` is 0
   * set `tail` to `null`

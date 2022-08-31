@@ -131,8 +131,8 @@ describe('singly linked list', () => {
 
             expect(result).toEqual(1);
             expect(list.length).toEqual(2);
-            expect(list.head).toEqual(2);
-            expect(list.tail).toEqual(3);
+            expect(list.head.value).toEqual(2);
+            expect(list.tail.value).toEqual(3);
         });
     });
 
