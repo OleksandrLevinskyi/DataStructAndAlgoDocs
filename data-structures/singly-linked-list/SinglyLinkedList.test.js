@@ -44,6 +44,7 @@ describe('singly linked list', () => {
             const list = new SinglyLinkedList();
             list.push(1);
 
+
             const result = list.pop();
 
             expect(result).toEqual(1);
@@ -52,7 +53,7 @@ describe('singly linked list', () => {
             expect(list.tail).toEqual(null);
         });
 
-        it('removes a node', function () {
+        it('removes a node from the end', function () {
             const list = new SinglyLinkedList();
             list.push(1);
             list.push(2);
@@ -62,8 +63,8 @@ describe('singly linked list', () => {
 
             expect(result).toEqual(3);
             expect(list.length).toEqual(2);
-            expect(list.head).toEqual(1);
-            expect(list.tail).toEqual(2);
+            expect(list.head.value).toEqual(1);
+            expect(list.tail.value).toEqual(2);
         });
     });
 

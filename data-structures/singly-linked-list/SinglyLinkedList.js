@@ -22,23 +22,52 @@ class SinglyLinkedList {
         return this;
     }
 
-    pop(){
-        //conditional for length at the end
+    pop() {
+        if (this.length === 0) {
+            return undefined;
+        }
+
+        const oldTail = this.tail;
+
+        if (this.length === 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            let newTail = this.head;
+
+            while (newTail.next !== oldTail) {
+                newTail = newTail.next;
+            }
+
+            newTail.next = null;
+            this.tail = newTail;
+        }
+
+        this.length--;
+
+        return oldTail.value;
     }
 
-    unshift(value){}
+    unshift(value) {
+    }
 
-    shift(){}
+    shift() {
+    }
 
-    get(idx){}
+    get(idx) {
+    }
 
-    set(idx, value){}
+    set(idx, value) {
+    }
 
-    insert(idx, value){}
+    insert(idx, value) {
+    }
 
-    remove(idx){}
+    remove(idx) {
+    }
 
-    reverse(){}
+    reverse() {
+    }
 }
 
 module.exports = {SinglyLinkedList};
