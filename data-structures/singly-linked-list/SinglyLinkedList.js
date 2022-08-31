@@ -150,6 +150,22 @@ class SinglyLinkedList {
     }
 
     reverse() {
+        const oldHead = this.head;
+        this.head = this.tail;
+        this.tail = oldHead;
+
+        let prevNode = null;
+        let currNode = this.tail;
+        let nextNode = null;
+
+        while (currNode) {
+            nextNode = currNode.next;
+            currNode.next = prevNode;
+            prevNode = currNode;
+            currNode = nextNode;
+        }
+
+        return this;
     }
 }
 

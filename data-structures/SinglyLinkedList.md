@@ -106,6 +106,7 @@ Singly Linked List consists of nodes. The node's structure can be found [here](s
   * set `currNode.next` to `prevNode`
   * set `prevNode` to `currNode`
   * set `currNode` to `nextNode`
+* return `this`
   
 ---
   

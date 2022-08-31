@@ -143,6 +143,7 @@ describe('singly linked list', () => {
             const result = list.get(0);
 
             expect(result).toEqual(undefined);
+            expect(list.length).toEqual(0);
         });
 
         it('returns undefined in case a given idx is less than 0', () => {
@@ -152,6 +153,7 @@ describe('singly linked list', () => {
             const result = list.get(-1);
 
             expect(result).toEqual(undefined);
+            expect(list.length).toEqual(1);
         });
 
         it('returns undefined in case a given idx is greater that a list\'s scope', () => {
@@ -161,6 +163,7 @@ describe('singly linked list', () => {
             const result = list.get(1);
 
             expect(result).toEqual(undefined);
+            expect(list.length).toEqual(1);
         });
 
         it('returns a value under a specified index in a list', () => {
@@ -173,6 +176,7 @@ describe('singly linked list', () => {
             const result = list.get(2);
 
             expect(result.value).toEqual(3);
+            expect(list.length).toEqual(4);
         });
     });
 
@@ -184,6 +188,7 @@ describe('singly linked list', () => {
             const result = list.set(-1, 1);
 
             expect(result).toEqual(false);
+            expect(list.length).toEqual(1);
         });
 
         it('returns false in case a given idx is greater that a list\'s scope', () => {
@@ -193,6 +198,7 @@ describe('singly linked list', () => {
             const result = list.set(1, 2);
 
             expect(result).toEqual(false);
+            expect(list.length).toEqual(1);
         });
 
         it('updates a node\'s value with a given one', () => {
@@ -204,6 +210,7 @@ describe('singly linked list', () => {
             const result = list.set(1, 10);
 
             expect(result).toEqual(true);
+            expect(list.length).toEqual(3);
             expect(list.head.value).toEqual(1);
             expect(list.head.next.value).toEqual(10);
             expect(list.tail.value).toEqual(3);
@@ -220,7 +227,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(false);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
-            expect(list.tail.value).toEqual(1);
+            expect(list.tail).toEqual(list.head);
         });
 
         it('returns false in case a given idx is greater that a list\'s length', () => {
@@ -232,7 +239,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(false);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
-            expect(list.tail.value).toEqual(1);
+            expect(list.tail).toEqual(list.head);
         });
 
         it('inserts a node with a given value to the beginning', () => {
@@ -284,7 +291,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(undefined);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
-            expect(list.tail.value).toEqual(1);
+            expect(list.tail).toEqual(list.head);
         });
 
         it('returns undefined in case a given idx is greater that a last node\'s idx', () => {
@@ -296,7 +303,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(undefined);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
-            expect(list.tail.value).toEqual(1);
+            expect(list.tail).toEqual(list.head);
         });
 
         it('can remove a node at the beginning', () => {
@@ -309,7 +316,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(1);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(2);
-            expect(list.tail.value).toEqual(2);
+            expect(list.tail).toEqual(list.head);
         });
 
         it('can remove a node at the end', () => {
@@ -322,7 +329,7 @@ describe('singly linked list', () => {
             expect(result).toEqual(2);
             expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
-            expect(list.tail.value).toEqual(1);
+            expect(list.tail).toEqual(list.head);
         });
 
         it('remove a node at the specified index', () => {
@@ -348,6 +355,7 @@ describe('singly linked list', () => {
             const result = list.reverse();
 
             expect(result).toEqual(list);
+            expect(list.length).toEqual(0);
             expect(list.head).toEqual(null);
             expect(list.tail).toEqual(null);
         });
@@ -359,8 +367,9 @@ describe('singly linked list', () => {
             const result = list.reverse();
 
             expect(result).toEqual(list);
+            expect(list.length).toEqual(1);
             expect(list.head.value).toEqual(1);
-            expect(list.head.next).toEqual(list.tail);
+            expect(list.head).toEqual(list.tail);
         });
 
         it('reverses a list', () => {
@@ -368,13 +377,16 @@ describe('singly linked list', () => {
             list.push(1);
             list.push(2);
             list.push(3);
+            list.push(4);
 
             const result = list.reverse();
 
             expect(result).toEqual(list);
-            expect(list.head.value).toEqual(3);
-            expect(list.head.next.value).toEqual(2);
-            expect(list.head.next.next.value).toEqual(1);
+            expect(list.length).toEqual(4);
+            expect(list.head.value).toEqual(4);
+            expect(list.head.next.value).toEqual(3);
+            expect(list.head.next.next.value).toEqual(2);
+            expect(list.tail.value).toEqual(1);
         });
     });
 });
