@@ -10,6 +10,4 @@ const getConcatenation = (nums) => {
 }
 
 // REFACTORED VERSION:
-// const getConcatenation = (nums) => {
-//     return [...nums, ...nums];
-// }
+// const getConcatenation = (nums) => [...nums, ...nums];

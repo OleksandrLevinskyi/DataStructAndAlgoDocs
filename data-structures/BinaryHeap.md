@@ -1,7 +1,6 @@
-# Priority Queue
-Priority Queue consists of nodes. The node's structure can be found [here](priority-queue/Node.js).\ 
-This Priority Queue follows the same logic as Min Binary Heap.
-3 properties: `values`
+# Binary Heap
+This is Max Binary Heap Implementation. Min Binary Heap follows the same logic, but with reversed conditions.
+1 property: `values`
 
 ### `insert (value): this`
 #### TIME: `O(log n)` | SPACE: `O(1)`
@@ -27,10 +26,10 @@ This Priority Queue follows the same logic as Min Binary Heap.
             * `maxValueIdx` is `leftChildIdx`
     * if `rightChildIdx < arr.length`
         * if (`maxValueIdx` is `null` AND right child is greater than parent) OR
-             (`maxValueIdx` is not `null` AND right child is greater than left one)
+          (`maxValueIdx` is not `null` AND right child is greater than left one)
             * `maxValueIdx` is `rightChildIdx`
     * if `maxValueIdx` is not `null`
-        * swap elements under `maxValueIdx` and `maxValueIdx`
+        * swap elements under `parentIdx` and `maxValueIdx`
     * assign `parentIdx` to `maxIdx`
 * assign `values` to `arr`
 * return `deletedValue`

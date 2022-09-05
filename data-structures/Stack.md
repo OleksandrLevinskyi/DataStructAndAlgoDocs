@@ -1,5 +1,5 @@
 # Stack
-Stack consists of nodes. Stack node's structure can be found [here](singly-linked-list/Node.js).\
+Stack consists of nodes. The node's structure can be found [here](singly-linked-list/Node.js).\
 LIFO = Last In First Out\
 3 properties: `first`, `last`, `size`
 
