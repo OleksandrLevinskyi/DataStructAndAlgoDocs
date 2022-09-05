@@ -1,3 +1,5 @@
+// TIME: O(n) - loop over each element of operations array
+// SPACE: O(1)
 const finalValueAfterOperations = (operations) => {
     let result = 0;
 

@@ -1,3 +1,5 @@
+// TIME: O(n*m) - loop over each element in a 2d accounts array (n rows; m cols)
+// SPACE: O(1)
 const maximumWealth = (accounts) => {
     let maxWealth = 0;
 

@@ -1,3 +1,5 @@
+// TIME: O(n) - loop over each element in nums array
+// SPACE: O(n) - space allocated for ans array (2 times bigger than nums)
 const getConcatenation = (nums) => {
     const ans = [];
 

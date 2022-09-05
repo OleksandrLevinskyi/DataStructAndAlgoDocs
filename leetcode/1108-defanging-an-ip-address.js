@@ -1,3 +1,5 @@
+// TIME: O(n) - loop over each char in address
+// SPACE: O(n) - allocated space for the result string
 const defangIPaddr = (address) => {
     let result = '';
 

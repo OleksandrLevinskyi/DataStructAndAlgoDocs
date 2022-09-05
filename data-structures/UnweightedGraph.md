@@ -14,7 +14,7 @@ Unweighted Graph stores connections between vertices without weight.\
     * push `vertex2` into `adjacencyList[vertex1]`
 
 ### `removeEdge (vertex1, vertex2): void`
-#### TIME: `O(1)` | SPACE: `O(1)`
+#### TIME: `O(E)` | SPACE: `O(1)`
 * if both vertices exist and have a connection
     * remove `vertex1` from `adjacencyList[vertex2]`
     * remove `vertex2` from `adjacencyList[vertex1]`

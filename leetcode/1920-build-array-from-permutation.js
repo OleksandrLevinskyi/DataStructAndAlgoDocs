@@ -1,3 +1,5 @@
+// TIME: O(n) - loop over each element in nums array twice
+// SPACE: O(1) - euclid's division is used to preserve space
 // https://www.cuemath.com/numbers/euclids-division-algorithm/
 const buildArray = (nums) => {
     // pre-process the array with euclid's division algorithm
