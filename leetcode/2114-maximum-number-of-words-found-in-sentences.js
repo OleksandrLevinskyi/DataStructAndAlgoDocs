@@ -1,5 +1,5 @@
-// Time: O(n*m) - loop over each character in each sentence
-// Space: O(1)
+// TIME: O(n*m) - loop over each character in each sentence
+// SPACE: O(1)
 const mostWordsFound = (sentences) => {
     let maxWordCount = 0;
 

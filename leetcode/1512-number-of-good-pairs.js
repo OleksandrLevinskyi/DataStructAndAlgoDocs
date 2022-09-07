@@ -1,6 +1,6 @@
-//https://math.stackexchange.com/questions/167313/difference-between-permutation-and-combination
-//TIME: O(n) - loop over each element in nums & numberDict
-//SPACE: O(n) - to store elements in numberDict
+// https://math.stackexchange.com/questions/167313/difference-between-permutation-and-combination
+// TIME: O(n) - loop over each element in nums & numberDict
+// SPACE: O(n) - to store elements in numberDict
 const numIdenticalPairs = (nums) => {
     const numberDict = {};
     let goodPairCount = 0;

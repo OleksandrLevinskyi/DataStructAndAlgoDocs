@@ -15,7 +15,7 @@ const getTargetCopy = (original, cloned, target) => {
     return getTargetCopy(original.right, cloned.right, target);
 }
 
-// REFACTORED VERSION (subtracting extraCandies):
+// REFACTORED VERSION:
 // const getTargetCopy = (original, cloned, target) => {
 //     if (original === null || original === target) {
 //         return cloned;
