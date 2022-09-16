@@ -8,6 +8,19 @@ class DoublyLinkedList {
     }
 
     push(value) {
+        const node = new Node(value);
+
+        if (this.length === 0) {
+            this.head = node;
+        } else {
+            this.tail.next = node;
+            node.prev = this.tail;
+        }
+
+        this.tail = node;
+        this.length++;
+
+        return this;
     }
 
     pop() {

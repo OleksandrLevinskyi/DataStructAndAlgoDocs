@@ -34,7 +34,7 @@ describe('doubly linked list', () => {
             expect(list.head.next.next).toEqual(list.tail);
 
             expect(list.tail.value).toEqual(3);
-            expect(list.tail.prev).toEqual(list.head);
+            expect(list.tail.prev).toEqual(list.head.next);
             expect(list.tail.next).toEqual(null);
         });
     });
