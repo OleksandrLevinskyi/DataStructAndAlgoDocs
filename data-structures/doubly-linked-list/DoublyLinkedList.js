@@ -24,6 +24,24 @@ class DoublyLinkedList {
     }
 
     pop() {
+        if (this.length === 0) {
+            return undefined;
+        }
+
+        const removedNode = this.tail.value;
+
+        if (this.length === 1) {
+            this.head = null;
+            this.tail = null;
+        } else {
+            this.tail = this.tail.prev;
+            this.tail.next.prev = null;
+            this.tail.next = null;
+        }
+
+        this.length--;
+
+        return removedNode;
     }
 
     unshift(value) {

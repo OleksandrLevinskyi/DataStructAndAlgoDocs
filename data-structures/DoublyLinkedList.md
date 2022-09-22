@@ -22,14 +22,14 @@ Doubly Linked List takes up more memory for an extra pointer.\
 * if `length` is 0
   * return `underfined`
 * store current `tail` in a variable
-* set `next` on the 2nd last node to `null`
-* set `tail.prev` to `null`
-* set `tail` to the 2nd last node
-* decrement `length`
-* if `length` is 0
+* if `length` is 1
   * set `head` to `null`
-* else
   * set `tail` to `null`
+* else
+  * set `tail` to the 2nd last node
+  * set `prev` on the old tail to `null`
+  * set `tail.next` to `null`
+* decrement `length`
 * return `value` of the previously stored `tail`
 
 ### `unshift (value): this`
