@@ -51,10 +51,11 @@ Doubly Linked List takes up more memory for an extra pointer.\
 * store current `head` in a variable
 * set `head` to the 2nd node
 * set old head's `next` to `null`
-* set `head.prev` to `null`
 * decrement `length`
 * if `length` is 0
   * set `tail` to `null`
+* else
+  * set `head.prev` to `null`
 * return `value` of the previously stored `head`
 
 ### `get (idx): Node|underfined`

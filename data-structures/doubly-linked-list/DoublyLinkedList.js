@@ -61,6 +61,23 @@ class DoublyLinkedList {
     }
 
     shift() {
+        if (this.length === 0) {
+            return undefined;
+        }
+
+        const removedNode = this.head;
+
+        this.head = this.head.next;
+        removedNode.next = null;
+        this.length--;
+
+        if (this.length === 0) {
+            this.tail = null;
+        } else {
+            this.head.prev = null;
+        }
+
+        return removedNode.value;
     }
 
     get(idx) {
