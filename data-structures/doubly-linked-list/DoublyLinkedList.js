@@ -101,6 +101,15 @@ class DoublyLinkedList {
     }
 
     set(idx, value) {
+        const node = this.get(idx);
+
+        if (!node) {
+            return false;
+        }
+
+        node.value = value;
+
+        return true;
     }
 
     insert(idx, value) {

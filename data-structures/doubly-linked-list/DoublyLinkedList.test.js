@@ -284,7 +284,7 @@ describe('doubly linked list', () => {
             expect(list.head.value).toEqual(1);
             expect(list.head.prev).toEqual(null);
 
-            expect(list.head.next.value).toEqual(12);
+            expect(list.head.next.value).toEqual(10);
             expect(list.head.next.prev).toEqual(list.head);
             expect(list.head.next.next).toEqual(list.tail);
 
