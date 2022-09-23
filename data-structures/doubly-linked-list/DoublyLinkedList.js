@@ -28,20 +28,19 @@ class DoublyLinkedList {
             return undefined;
         }
 
-        const removedNode = this.tail.value;
+        const removedNode = this.tail;
 
-        if (this.length === 1) {
+        this.tail = this.tail.prev;
+        removedNode.prev = null;
+        this.length--;
+
+        if (this.length === 0) {
             this.head = null;
-            this.tail = null;
         } else {
-            this.tail = this.tail.prev;
-            this.tail.next.prev = null;
             this.tail.next = null;
         }
 
-        this.length--;
-
-        return removedNode;
+        return removedNode.value;
     }
 
     unshift(value) {
