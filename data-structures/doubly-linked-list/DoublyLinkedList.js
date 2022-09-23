@@ -80,6 +80,24 @@ class DoublyLinkedList {
     }
 
     get(idx) {
+        if (idx < 0 || idx > this.length - 1) {
+            return undefined;
+        }
+
+        const middleIdx = Math.floor(this.length / 2);
+        let foundNode = idx < middleIdx ? this.head : this.tail;
+
+        if (idx < middleIdx) {
+            for (let i = 0; i < idx; i++) {
+                foundNode = foundNode.next;
+            }
+        } else {
+            for (let i = this.length - 1; i > idx; i--) {
+                foundNode = foundNode.prev;
+            }
+        }
+
+        return foundNode;
     }
 
     set(idx, value) {

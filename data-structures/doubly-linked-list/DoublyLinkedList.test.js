@@ -202,7 +202,22 @@ describe('doubly linked list', () => {
             expect(list.length).toEqual(1);
         });
 
-        it('returns a value under a specified index in a list', () => {
+        it('returns a node under a specified index in a list (located in the first list half)', () => {
+            const list = new DoublyLinkedList();
+            list.push(1);
+            list.push(2);
+            list.push(3);
+            list.push(4);
+
+            const result = list.get(1);
+
+            expect(result.value).toEqual(2);
+            expect(result.prev.value).toEqual(1);
+            expect(result.next.value).toEqual(3);
+            expect(list.length).toEqual(4);
+        });
+
+        it('returns a node under a specified index in a list (located in the second list half)', () => {
             const list = new DoublyLinkedList();
             list.push(1);
             list.push(2);
@@ -215,6 +230,22 @@ describe('doubly linked list', () => {
             expect(result.prev.value).toEqual(2);
             expect(result.next.value).toEqual(4);
             expect(list.length).toEqual(4);
+        });
+
+        it('returns a node under a specified index in a list (located in the middle of the list)', () => {
+            const list = new DoublyLinkedList();
+            list.push(1);
+            list.push(2);
+            list.push(3);
+            list.push(4);
+            list.push(5);
+
+            const result = list.get(2);
+
+            expect(result.value).toEqual(3);
+            expect(result.prev.value).toEqual(2);
+            expect(result.next.value).toEqual(4);
+            expect(list.length).toEqual(5);
         });
     });
 
