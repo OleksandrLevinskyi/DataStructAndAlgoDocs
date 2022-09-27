@@ -447,7 +447,7 @@ describe('doubly linked list', () => {
             expect(list.tail).toEqual(list.head);
         });
 
-        it('remove a node at the specified index', () => {
+        it('can remove a node at the specified index', () => {
             const list = new DoublyLinkedList();
             list.push(1);
             list.push(2);
@@ -461,12 +461,8 @@ describe('doubly linked list', () => {
             expect(list.head.value).toEqual(1);
             expect(list.head.prev).toEqual(null);
 
-            expect(list.head.next.value).toEqual(3);
-            expect(list.head.next.prev).toEqual(list.head);
-            expect(list.head.next.next).toEqual(list.tail);
-
             expect(list.tail.value).toEqual(3);
-            expect(list.tail.prev).toEqual(list.head.next);
+            expect(list.tail.prev).toEqual(list.head);
             expect(list.tail.next).toEqual(null);
         });
     });

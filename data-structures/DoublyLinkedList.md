@@ -96,7 +96,7 @@ Doubly Linked List takes up more memory for an extra pointer.\
   * return `undefined`
 * if `idx` is 0
   * return a result from `shift()`
-* else if `idx` points to the last element
+* if `idx` points to the last element
   * return a result from `pop()`
 * use `get(idx - 1)` to get a preceding node
 * store a node to delete in a variable
