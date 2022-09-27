@@ -163,6 +163,29 @@ class DoublyLinkedList {
     }
 
     reverse() {
+        const middle = Math.floor(this.length / 2);
+
+        const temp = this.head;
+        this.head = this.tail;
+        this.tail = temp;
+
+        let start = this.head;
+        let end = this.tail;
+
+        for (let i = 0; i < middle; i++) {
+            let temp = start.next;
+            start.next = start.prev;
+            start.prev = temp;
+
+            temp = end.next;
+            end.next = end.prev;
+            end.prev = temp;
+
+            start = start.next;
+            end = end.prev;
+        }
+
+        return this;
     }
 }
 

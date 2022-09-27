@@ -109,8 +109,11 @@ Doubly Linked List takes up more memory for an extra pointer.\
 
 ### `reverse (): this`
 #### TIME: `O(n)` | SPACE: `O(1)`
+* find `middle`
 * swap `head` and `tail`
-* iterate over the list to swap nodes' `prev`/`next`
+* create two pointers for start and end
+* iterate over the list (up to the middle) to swap nodes' `prev`/`next` properties
+* return `this`
 
 ---
 

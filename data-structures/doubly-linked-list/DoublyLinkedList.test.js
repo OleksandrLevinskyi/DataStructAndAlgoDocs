@@ -488,9 +488,6 @@ describe('doubly linked list', () => {
             expect(result).toEqual(list);
             expect(list.length).toEqual(1);
 
-            expect(list.head.value).toEqual(1);
-            expect(list.head).toEqual(null);
-            expect(list.tail).toEqual(null);
             expect(list.head).toEqual(list.tail);
         });
 
