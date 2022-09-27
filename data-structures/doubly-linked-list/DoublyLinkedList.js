@@ -113,6 +113,27 @@ class DoublyLinkedList {
     }
 
     insert(idx, value) {
+        if (idx < 0 || idx > this.length) {
+            return false;
+        }
+
+        if (idx === 0) {
+            this.unshift(value);
+        } else if (idx === this.length) {
+            this.push(value);
+        } else {
+            const node = new Node(value);
+            const prevNode = this.get(idx - 1);
+
+            prevNode.next.prev = node;
+            node.prev = prevNode;
+            node.next = prevNode.next;
+            prevNode.next = node;
+
+            this.length++
+        }
+
+        return true;
     }
 
     remove(idx) {
