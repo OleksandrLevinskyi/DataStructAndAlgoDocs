@@ -1,3 +1,5 @@
+const {Node} = require("../singly-linked-list/Node");
+
 class Stack {
     constructor() {
         this.first = null;
@@ -5,7 +7,19 @@ class Stack {
         this.size = 0;
     }
 
-    push() {
+    push(value) {
+        const node = new Node(value);
+
+        if (this.size === 0) {
+            this.last = node;
+        } else {
+            node.next = this.first;
+        }
+
+        this.first = node;
+        this.size++;
+
+        return this;
     }
 
     pop() {

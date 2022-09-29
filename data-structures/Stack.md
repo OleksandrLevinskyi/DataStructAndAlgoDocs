@@ -7,10 +7,10 @@ LIFO = Last In First Out\
 #### TIME: `O(1)` | SPACE: `O(1)`
 * create a new node
 * if `size` is 0
-    * set `first` and `last` to be the new node
+    * set `last` to be the new node
 * else
     * set the new node's `next` to be `first`
-    * set `first` to be the new node
+* set `first` to be the new node
 * increment `size`
 * return `this`
 
