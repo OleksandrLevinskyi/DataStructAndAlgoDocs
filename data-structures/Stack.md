@@ -22,7 +22,9 @@ LIFO = Last In First Out\
 * set `first` to the 2nd node
 * set `next` on the 1st node to `null`
 * decrement `size`
-* return `value` of the previously stored `first`
+* if `size` is 0
+    * set `last` to `null`
+* return `value` of the removed node
 
 ---
 

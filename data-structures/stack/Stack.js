@@ -23,6 +23,20 @@ class Stack {
     }
 
     pop() {
+        if (this.size === 0) {
+            return undefined;
+        }
+
+        const removedNode = this.first;
+        this.first = removedNode.next;
+        removedNode.next = null;
+        this.size--;
+
+        if (this.size === 0) {
+            this.last = null;
+        }
+
+        return removedNode.value;
     }
 }
 
