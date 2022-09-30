@@ -1,5 +1,5 @@
 # Queue
-Queue consists of nodes. The node's structure can be found [here](singly-linked-list/Node.js).\
+Queue consists of nodes. The node's structure can be found [here](../singly-linked-list/Node.js).\
 FIFO = First In First Out\
 3 properties: `first`, `last`, `size`
 
@@ -16,7 +16,7 @@ FIFO = First In First Out\
 
 ### `dequeue (): number|underfined`**
 #### TIME: `O(1)` | SPACE: `O(1)`
-* same as [pop() in Stack](Stack.md)
+* same as [pop() in Stack](../stack/Stack.md)
 
 ---
 

@@ -1,5 +1,5 @@
 # Priority Queue
-Priority Queue consists of nodes. The node's structure can be found [here](priority-queue/Node.js).\
+Priority Queue consists of nodes. The node's structure can be found [here](Node.js).\
 This Priority Queue follows the same logic as Min Binary Heap.
 1 property: `values`
 

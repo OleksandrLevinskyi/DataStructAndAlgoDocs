@@ -1,5 +1,5 @@
 # Singly Linked List
-Singly Linked List consists of nodes. The node's structure can be found [here](singly-linked-list/Node.js).\
+Singly Linked List consists of nodes. The node's structure can be found [here](Node.js).\
 3 properties: `head`, `tail`, `length`
 
 ---

@@ -1,5 +1,5 @@
 # Doubly Linked List
-Doubly Linked List consists of nodes. The node's structure can be found [here](doubly-linked-list/Node.js).\
+Doubly Linked List consists of nodes. The node's structure can be found [here](Node.js).\
 Doubly Linked List takes up more memory for an extra pointer.\
 3 properties: `head`, `tail`, `length`
 

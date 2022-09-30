@@ -1,5 +1,5 @@
 # Binary Search Tree
-Binary Search Tree consists of nodes. The node's structure can be found [here](binary-search-tree/Node.js).\
+Binary Search Tree consists of nodes. The node's structure can be found [here](Node.js).\
 1 property: `root`
 
 ### `insert (root, value): this`
