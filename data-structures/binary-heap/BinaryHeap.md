@@ -1,5 +1,5 @@
 # Binary Heap
-This is Max Binary Heap Implementation. Min Binary Heap follows the same logic, but with reversed conditions.
+This description outlines Max Binary Heap Implementation. Min Binary Heap follows the same logic, but with reversed conditions.
 1 property: `values`
 
 ### `insert (value): this`
