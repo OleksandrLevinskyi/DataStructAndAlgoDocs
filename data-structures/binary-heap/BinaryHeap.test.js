@@ -52,6 +52,35 @@ describe('binary heap', () => {
     });
 
     describe('extractMax', () => {
+        it('extracts a max value with 1 element in a heap', () => {
+            const binaryHeap = new BinaryHeap();
+            binaryHeap.insert(1);
 
+            const result = binaryHeap.extractMax();
+
+            expect(result).toEqual(1);
+            expect(binaryHeap.values.length).toEqual(0);
+        });
+
+        it('extracts a max value and re-arranges a heap correctly', () => {
+            const binaryHeap = new BinaryHeap();
+            binaryHeap.insert(5);
+            binaryHeap.insert(3);
+            binaryHeap.insert(7);
+            binaryHeap.insert(10);
+            binaryHeap.insert(0);
+            binaryHeap.insert(2);
+            binaryHeap.insert(6);
+
+            const result = binaryHeap.extractMax();
+
+            expect(result).toEqual(10);
+            expect(binaryHeap.values[0]).toEqual(7);
+            expect(binaryHeap.values[1]).toEqual(5);
+            expect(binaryHeap.values[2]).toEqual(6);
+            expect(binaryHeap.values[3]).toEqual(3);
+            expect(binaryHeap.values[4]).toEqual(0);
+            expect(binaryHeap.values[5]).toEqual(2);
+        });
     });
 });
