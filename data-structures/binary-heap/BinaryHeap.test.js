@@ -5,16 +5,16 @@ describe('binary heap', () => {
         it('adds a value to an empty list', () => {
             const binaryHeap = new BinaryHeap();
 
-            const result = binaryHeap.insert(1);
+            const result = binaryHeap.insert(1).values;
 
             expect(result[0]).toEqual(1);
         });
 
-        it('adds a bigger value and places it as a root', () => {
+        it.only('adds a bigger value and places it as a root', () => {
             const binaryHeap = new BinaryHeap();
 
             binaryHeap.insert(1);
-            const result = binaryHeap.insert(2);
+            const result = binaryHeap.insert(2).values;
 
             expect(result[0]).toEqual(2);
             expect(result[1]).toEqual(1);
@@ -24,7 +24,7 @@ describe('binary heap', () => {
             const binaryHeap = new BinaryHeap();
 
             binaryHeap.insert(1);
-            const result = binaryHeap.insert(0);
+            const result = binaryHeap.insert(0).values;
 
             expect(result[0]).toEqual(1);
             expect(result[1]).toEqual(0);
@@ -39,7 +39,7 @@ describe('binary heap', () => {
             binaryHeap.insert(10);
             binaryHeap.insert(0);
             binaryHeap.insert(2);
-            const result = binaryHeap.insert(6);
+            const result = binaryHeap.insert(6).values;
 
             expect(result[0]).toEqual(10);
             expect(result[1]).toEqual(7);
