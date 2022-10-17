@@ -33,9 +33,7 @@ class BinaryHeap {
             return undefined;
         }
 
-        const temp = arr[arr.length - 1];
-        arr[arr.length - 1] = arr[0];
-        arr[0] = temp;
+        this.swap(arr, arr.length - 1, 0)
 
         deletedValue = arr.pop();
 
@@ -58,9 +56,7 @@ class BinaryHeap {
             }
 
             if (maxValueIdx) {
-                const temp = arr[parentIdx];
-                arr[parentIdx] = arr[maxValueIdx];
-                arr[maxValueIdx] = temp;
+                this.swap(arr, parentIdx, maxValueIdx);
 
                 parentIdx = maxValueIdx;
             }
@@ -69,6 +65,12 @@ class BinaryHeap {
         this.values = arr;
 
         return deletedValue;
+    }
+
+    swap(arr, idx1, idx2) {
+        const temp = arr[idx1];
+        arr[idx1] = arr[idx2];
+        arr[idx2] = temp;
     }
 }
 
