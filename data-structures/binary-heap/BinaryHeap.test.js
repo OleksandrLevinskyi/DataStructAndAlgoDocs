@@ -10,7 +10,7 @@ describe('binary heap', () => {
             expect(result[0]).toEqual(1);
         });
 
-        it.only('adds a bigger value and places it as a root', () => {
+        it('adds a bigger value and places it as a root', () => {
             const binaryHeap = new BinaryHeap();
 
             binaryHeap.insert(1);

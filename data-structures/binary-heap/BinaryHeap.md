@@ -13,7 +13,7 @@ This description outlines Max Binary Heap Implementation. Min Binary Heap follow
 ### `extractMax (): number|underfined`
 #### TIME: `O(log n)` | SPACE: `O(1)`
 * create `parentIdx = 0`, `leftChildIdx`, `rightChildIdx`, `maxValueIdx` pointers
-* create `deletedValue`, `arr` variables
+* create `deletedValue`, `arr = this.values` variables
 * if `arr.length` is 0
     * return `undefined`
 * swap first and last elements in `values`
