@@ -1,6 +1,7 @@
 describe('binary search tree', () => {
     describe('insert', () => {
         it('inserts a node into an empty tree', () => {
+
         });
 
         it('arranges the values correctly', () => {
