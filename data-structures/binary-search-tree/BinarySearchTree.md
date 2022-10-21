@@ -2,15 +2,20 @@
 Binary Search Tree consists of nodes. The node's structure can be found [here](Node.js).\
 1 property: `root`
 
-### `insert (root, value): this`
+### `insert (currRoot): this`
 #### TIME: `O(n)` | SPACE: `O(1)`
-* if `root` is `null`
+* assign the result of `insertNode` function to the tree's `root`
+* return `this`
+
+### `insertNode (currRoot, value): this`
+#### TIME: `O(n)` | SPACE: `O(1)`
+* if `currRoot` is `null`
     * return a new node
-* else if `value` is less than `root.value`
-    * assign `root.left` to a result of a recursive `insert` call with `root.left`
-* else if `value` is more than `root.value`
-    * assign `root.right` to a result of a recursive `insert` call with `root.right`
-* return `root`
+* else if `value` is less than `currRoot.value`
+    * assign `currRoot.left` to a result of a recursive `insert` call with `currRoot.left`
+* else if `value` is more than `currRoot.value`
+    * assign `currRoot.right` to a result of a recursive `insert` call with `currRoot.right`
+* return `currRoot`
 
 ### `remove (value): number|underfined`
 #### TIME: `O(n)` | SPACE: `O(1)`
