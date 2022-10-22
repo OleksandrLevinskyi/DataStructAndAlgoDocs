@@ -7,7 +7,7 @@ Binary Search Tree consists of nodes. The node's structure can be found [here](N
 * assign the result of `insertNode` function to the tree's `root`
 * return `this`
 
-### `insertNode (currRoot, value): this`
+### `insertNode (currRoot, value): Node`
 #### TIME: `O(n)` | SPACE: `O(1)`
 * if `currRoot` is `null`
     * return a new node
@@ -17,7 +17,7 @@ Binary Search Tree consists of nodes. The node's structure can be found [here](N
     * assign `currRoot.right` to a result of a recursive `insert` call with `currRoot.right`
 * return `currRoot`
 
-### `remove (value): number|underfined`
+### `remove (value): Node|underfined`
 #### TIME: `O(n)` | SPACE: `O(1)`
 * if `root` is `null`
     * return `undefined`
