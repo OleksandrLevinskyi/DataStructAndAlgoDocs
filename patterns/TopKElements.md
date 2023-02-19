@@ -1,4 +1,4 @@
-# Top K elements
+# Top K Elements
 <img src="https://github.com/OleksandrLevinskyi/DataStructAndAlgoDocs/blob/main/patterns/images/top-k-elements.png" alt="top k elements" width="300"/>
 
 ### Description:
