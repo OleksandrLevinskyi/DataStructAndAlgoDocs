@@ -11,9 +11,20 @@
 * find the longest/shortest substring, subarray, or a desired value
 
 ### Common problems:
-* finding the longest subarray containing all 1s
-* maximum sum subarray of size ‘K’ (easy)
-* the longest substring with ‘K’ distinct characters (medium)
+* maximum sum subarray of size ‘k’ (easy)
+* finding the longest subarray containing all 1s (medium)
+* the longest substring with ‘k’ distinct characters (medium)
 * string anagrams (hard)
 
-Source: https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+### LeetCode:
+Problem: [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
+Solution: [Solution]()
+
+Problem: [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)
+Solution: [Solution]()
+
+Problem: [395. Longest Substring with At Least K Repeating Characters](https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/)
+Solution: [Solution]()
+
+Problem: [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
+Solution: [Solution]()
