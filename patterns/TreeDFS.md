@@ -1,5 +1,4 @@
 # Tree DFS
-<img src="https://github.com/OleksandrLevinskyi/DataStructAndAlgoDocs/blob/main/patterns/images/tree-dfs.png" alt="tree dfs" width="300"/>
 
 ### Description:
 * uses recursion or a stack for the iterative approach to keep track of all the previous (parent) nodes while traversing

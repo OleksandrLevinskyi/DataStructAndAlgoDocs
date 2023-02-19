@@ -1,5 +1,4 @@
 # Tree BFS
-<img src="https://github.com/OleksandrLevinskyi/DataStructAndAlgoDocs/blob/main/patterns/images/tree-bfs.png" alt="tree bfs" width="300"/>
 
 ### Description:
 * uses a queue to keep track of all the nodes of the same level before moving to the next one
