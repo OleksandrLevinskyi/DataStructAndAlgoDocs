@@ -1,4 +1,4 @@
-## K-way Merge
+# K-way Merge
 <img src="https://github.com/OleksandrLevinskyi/DataStructAndAlgoDocs/blob/main/patterns/images/k-way-merge.png" alt="k-way merge" width="300"/>
 
 ### Description:
