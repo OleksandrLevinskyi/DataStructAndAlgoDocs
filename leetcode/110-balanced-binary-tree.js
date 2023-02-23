@@ -19,3 +19,29 @@ const getHeight = (root) => {
 
     return [isSubtreeBalanced, maxSubtreeHeight];
 }
+
+// a similar solution without using [bool, int] arrays:
+// const isBalanced = (root) => {
+//     const result = getHeight(root);
+
+//     return result !== -1;
+// }
+
+// const getHeight = (root) => {
+//     if (root === null) {
+//         return 0;
+//     }
+
+//     const leftHeight = getHeight(root.left);
+//     const rightHeight = getHeight(root.right);
+
+//     const isSubtreeBalanced = Math.abs(leftHeight - rightHeight) <= 1 && 
+//                                 leftHeight !== -1 && 
+//                                 rightHeight !== -1;
+    
+//     if (isSubtreeBalanced) {
+//         return Math.max(leftHeight, rightHeight) + 1;
+//     }
+
+//     return -1;
+// }
