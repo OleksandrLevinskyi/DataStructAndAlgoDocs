@@ -1,5 +1,5 @@
 // TIME: O(n) - loop over each node in a linked list
-// SPACE: O(n) - for pointers
+// SPACE: O(1) - for pointers
 const swapNodes = (head, k) => {
     let beginNode = head;
     let endNode = head;
