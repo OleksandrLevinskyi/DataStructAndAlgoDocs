@@ -1,3 +1,4 @@
+// bottom-up approach:
 // TIME: O(n)
 // SPACE: O(n)
 const climbStairs = (n) => {
@@ -9,3 +10,16 @@ const climbStairs = (n) => {
 
     return solutions[n];
 }
+
+// an alternative top-down approach:
+// TIME: O(n)
+// SPACE: O(n)
+// const climbStairs = (n, solutions = [1, 1]) => {
+//     if (solutions[n]) {
+//         return solutions[n];
+//     }
+    
+//     solutions[n] = climbStairs(n - 1, solutions) + climbStairs(n - 2, solutions);
+
+//     return solutions[n];
+// }
