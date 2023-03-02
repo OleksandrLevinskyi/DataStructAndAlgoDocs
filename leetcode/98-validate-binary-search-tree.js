@@ -1,6 +1,5 @@
 // TIME: O(n)
 // SPACE: O(n)
-// pre-order dfs with recursion:
 const isValidBST = (root) => {
     return dfsPreOrder(root, -Infinity, +Infinity);
 }
@@ -17,7 +16,7 @@ const dfsPreOrder = (root, min, max) => {
     return dfsInOrder(root.left, min, root.val) && dfsInOrder(root.right, root.val, max);
 }
 
-// in-order dfs with stack:
+// an alternative approach with stack:
 // const isValidBST = (root) => {
 //     const stack = [];
 //     let previousRoot = null;
