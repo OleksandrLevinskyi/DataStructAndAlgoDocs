@@ -3,12 +3,12 @@
 // SPACE: O(n)
 const levelOrder = (root) => {
     const result = [];
-    dfsPreOrder(root, result, 0);
+    dfs(root, result, 0);
 
     return result;
 }
 
-const dfsPreOrder = (root, result, height) => {
+const dfs = (root, result, height) => {
     if (root) {
         if (result.length <= height) {
             result.push([]);
@@ -16,8 +16,8 @@ const dfsPreOrder = (root, result, height) => {
 
         result[height].push(root.val);
 
-        dfsPreOrder(root.left, result, height + 1);
-        dfsPreOrder(root.right, result, height + 1);
+        dfs(root.left, result, height + 1);
+        dfs(root.right, result, height + 1);
     }
 }
 
