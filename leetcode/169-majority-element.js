@@ -2,20 +2,20 @@
 // TIME: O(n)
 // SPACE: O(1)
 const majorityElement = (nums) => {
-    let candidateElement = null;
-    let count = 0;
+    let candidate = null;
+    let votes = 0;
 
     for (let num of nums) {
-        if (count === 0) {
-            candidateElement = num;
-        } 
-        
-        if (num === candidateElement) {
-            count++;
+        if (votes <= 0) {
+            candidate = num;
+        }
+
+        if (candidate === num) {
+            votes++;
         } else {
-            count--;
+            votes--;
         }
     }
 
-    return candidateElement;
+    return candidate;
 }
