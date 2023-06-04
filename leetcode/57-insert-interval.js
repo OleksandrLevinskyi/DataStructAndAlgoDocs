@@ -6,23 +6,23 @@ const insert = (intervals, newInterval) => {
     let newIntervalEnd = newInterval[newInterval.length - 1];
     let i = 0;
 
-    // put all of the intervals before the new one into the result
-    while (i < intervals.length && intervals[i][intervals[i].length - 1] < newIntervalStart) {
+    // push all the intervals before the overlap
+    while (i < intervals.length && intervals[i][1] < newIntervalStart) {
         result.push(intervals[i]);
         i++;
     }
 
-    // put the new interval in place
+    // merge all overlapping intervals
     while (i < intervals.length && intervals[i][0] <= newIntervalEnd) {
-        newIntervalStart = Math.min(intervals[i][0], newIntervalStart);
-        newIntervalEnd = Math.max(intervals[i][intervals[i].length - 1], newIntervalEnd);
+        newIntervalStart = Math.min(newIntervalStart, intervals[i][0])
+        newIntervalEnd = Math.max(newIntervalEnd, intervals[i][1]);
         i++;
     }
 
     result.push([newIntervalStart, newIntervalEnd]);
 
-    // put the other intervals into the result
-    while (i < intervals.length){
+    // push all the intervals after the overlap
+    while (i < intervals.length) {
         result.push(intervals[i]);
         i++;
     }
