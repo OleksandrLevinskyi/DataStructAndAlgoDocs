@@ -1,4 +1,4 @@
-// TIME: O(n)
+// TIME: O(nlogn)
 // SPACE: O(n)
 const merge = (intervals) => {
     intervals.sort((a, b) => a[0] - b[0]);
