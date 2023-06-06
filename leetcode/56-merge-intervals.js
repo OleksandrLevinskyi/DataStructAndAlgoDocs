@@ -7,9 +7,8 @@ const merge = (intervals) => {
     const result = [temp];
 
     for (let interval of intervals) {
-        // if overlapping, take the max value for the ending
         if (interval[0] <= temp[1]) {
-            temp[1] = Math.max(temp[1], interval[1]);
+            temp[1] = Math.max(interval[1], temp[1]); // covers nested or overlapping intervals
         } else {
             temp = interval;
             result.push(temp);
