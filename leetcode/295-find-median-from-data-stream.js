@@ -1,7 +1,8 @@
+// 295-find-median-from-data-stream.js
 // TIP: use max & min heaps; split the array in half
 // EXAMPLE: [3, 2, 7, 4, findMedian]
 class MedianFinder {
-    constructor(){
+    constructor() {
         this.maxHeap = new MaxHeap(); // max heap for the first half
         this.minHeap = new MaxHeap(); // min heap for the second half
     }
@@ -11,17 +12,19 @@ class MedianFinder {
     addNum(num) {
         this.maxHeap.insert(num);
 
+        // check all maxHeap elements are <= minHeap elements
         if (
-            this.maxHeap.length() > 0 && this.minHeap.length() > 0 && 
-            this.maxHeap.peak() > this.minHeap.peak()
+            this.maxHeap.length() > 0 && this.minHeap.length() > 0 &&
+            this.maxHeap.peak() > -this.minHeap.peak()
         ) {
             const i = this.maxHeap.extractMax();
             this.minHeap.insert(-i);
         }
 
+        // check lengths, max margin can be 1
         if (this.maxHeap.length() + 1 < this.minHeap.length()) {
-            const i = this.minHeap.extractMax();
-            this.maxHeap.insert(-i);
+            const i = -this.minHeap.extractMax();
+            this.maxHeap.insert(i);
         } else if (this.maxHeap.length() > this.minHeap.length() + 1) {
             const i = this.maxHeap.extractMax();
             this.minHeap.insert(-i);
@@ -35,11 +38,11 @@ class MedianFinder {
             return this.maxHeap.peak();
         }
 
-        if (this.maxHeap.length() < this.minHeap.length()) {
+        if (this.minHeap.length() > this.maxHeap.length()) {
             return -this.minHeap.peak();
         }
 
-        return (this.maxHeap.peak() + (-this.minHeap.peak())) / 2;
+        return (-this.minHeap.peak() + this.maxHeap.peak()) / 2;
     }
 }
 
